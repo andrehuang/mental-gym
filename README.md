@@ -2,35 +2,17 @@
 
 **Grind your way to domain expertise.**
 
-## The Problem
+## Why
 
-Here is a confession. I have spent hundreds of hours working with LLMs — reading papers through them, discussing ideas with them, having them summarize, explain, connect, and generate. At some point I had this pleasant feeling that I was becoming an expert. I could talk fluently about any topic in my field. I could reference the right papers. I could sound like I knew what I was talking about.
+You don't build muscle by watching someone else lift weights. You don't build mental expertise by watching an AI think.
 
-Then one day I tried to explain a core concept from scratch — no AI, no notes, just me and a blank page — and almost nothing came out.
+But that's what most AI-assisted "learning" is. You ask the LLM to explain something, it explains beautifully, and you walk away feeling smarter. You haven't gotten smarter. You've confused *access* to knowledge with *possession* of it. Try explaining that concept from scratch — no AI, no notes, blank page — and feel the gap.
 
-I had confused *access* to knowledge with *possession* of knowledge. The AI knew things. I had merely been in the room while it talked.
+This matters more now, not less. LLMs have commoditized surface-level knowledge. Anyone can sound informed about anything in five minutes. What's genuinely scarce — and increasingly valuable — is deep domain expertise: the kind that gives you judgment, research taste, the ability to connect ideas across fields, to see what others can't, to make real decisions under uncertainty. This doesn't come from chatting with an AI. It grows from within, through struggle, retrieval, and correction. There are no shortcuts. The 10,000 hours are still real.
 
-This is the dark side of the AI revolution that nobody warns you about. **LLMs create a compelling illusion of understanding.** You read an AI-generated explanation and it feels like learning. You have a sophisticated back-and-forth about a complex topic and walk away feeling smarter. But your brain hasn't changed. You haven't built the mental representations that let an expert see patterns, make connections, and think independently. You've watched someone else lift the weights and mistaken it for your own workout.
+Mental Gym is the tool for people who understand this. It inverts the AI workflow: **you produce, the AI challenges.** You explain concepts from memory. You predict findings before seeing them. You defend claims under pressure. You write from scratch. The AI designs exercises at your level, evaluates your responses with honest feedback, tracks what you actually know versus what you think you know, and never lets you stay comfortable.
 
-## The 10,000 Hour Question
-
-Ericsson's research on deliberate practice — popularly known as the "10,000 hour rule" — established that expertise requires sustained, effortful practice with feedback. Not just time. Not just exposure. *Effortful retrieval, generation, and correction.*
-
-So what happens to the 10,000 hours in the age of AI?
-
-The optimistic take: AI compresses the path. You can learn faster because you have a tireless tutor who knows everything.
-
-The realistic take: **AI makes it easier to skip the hours entirely while feeling like you haven't.** That is far more dangerous than being slow. A slow learner knows they're slow. A person who's spent months letting AI do the thinking doesn't even realize they've been standing still.
-
-The question isn't whether AI can accelerate expertise — it clearly can. The question is *how*. And the answer is not by having AI produce while you review. It's by having *you* produce while the AI challenges.
-
-## What Mental Gym Does
-
-Mental Gym inverts the default AI workflow. Instead of the AI generating and you consuming, you generate and the AI evaluates. You explain concepts from scratch. You predict experimental findings before seeing them. You defend positions under adversarial pressure. You teach confused students. You write from memory.
-
-The AI is your personal trainer. It designs exercises calibrated to your level, evaluates your responses with honest (sometimes brutal) feedback, tracks what you actually know versus what you think you know, and makes sure you never stay comfortable.
-
-**This tool is not for everyone.** It's for people who actually want to become domain experts — researchers, graduate students, professionals who need deep understanding, not surface fluency. If you want to casually learn about a topic, ask ChatGPT. If you want to *own* a field, you need to do the work. Mental Gym makes sure every hour of that work counts.
+**This is not for casual learners.** It's for researchers, graduate students, and professionals who want to genuinely own a field.
 
 ## How It Works
 
