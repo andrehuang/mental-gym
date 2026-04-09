@@ -82,14 +82,26 @@ def run_init(args):
             conn.close()
             return
 
-        # Insert topics
+        # Insert topics — if KB-backed, try to match each topic to its source file
+        # so that later `mental-gym sync` doesn't create duplicates.
+        kb_file_map: dict[str, tuple[str, str]] = {}
+        if kb_path:
+            from mental_gym.engine.kb_sync import scan_kb_files, file_hash as _fh
+            from pathlib import Path
+            for rel, fhash in scan_kb_files(kb_path).items():
+                stem = Path(rel).stem.replace("-", "_").replace(" ", "_").lower()
+                kb_file_map[stem] = (rel, fhash)
+
         topics = []
         for t in topics_data:
+            kb_match = kb_file_map.get(t["id"])
             topics.append(Topic(
                 id=t["id"],
                 name=t["name"],
                 description=t.get("description", ""),
                 source="generated" if not kb_path else "knowledge_base",
+                kb_file_path=kb_match[0] if kb_match else None,
+                kb_file_hash=kb_match[1] if kb_match else None,
             ))
         store.insert_topics_batch(topics)
 

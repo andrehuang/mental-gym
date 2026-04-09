@@ -140,13 +140,13 @@ def apply_sync(store: Store, kb_path: str,
     for f in modified_files:
         info = extract_topic_from_file(kb_path, f)
         if info:
-            # Update existing topic's description and hash
+            # Update existing topic's name, description, and hash
             existing = store.get_topic(info["id"])
             if existing:
                 store.conn.execute(
-                    """UPDATE topics SET description = ?, kb_file_hash = ?
+                    """UPDATE topics SET name = ?, description = ?, kb_file_hash = ?
                        WHERE id = ?""",
-                    (info["description"], info["hash"], info["id"]),
+                    (info["name"], info["description"], info["hash"], info["id"]),
                 )
                 store.conn.commit()
                 updated += 1
@@ -163,6 +163,31 @@ def apply_sync(store: Store, kb_path: str,
     store.conn.commit()
 
     return added, updated
+
+
+def retire_deleted(store: Store, deleted_files: List[str]) -> int:
+    """Retire topics whose KB source files have been deleted.
+
+    Sets kb_file_path and kb_file_hash to NULL so the topic is no longer
+    tied to a file, and marks it as source='retired'. The topic stays in the
+    DB (preserving mastery data) but won't be selected for new exercises.
+    """
+    retired = 0
+    for f in deleted_files:
+        # Find topics linked to this file
+        rows = store.conn.execute(
+            "SELECT id FROM topics WHERE kb_file_path = ?", (f,)
+        ).fetchall()
+        for row in rows:
+            store.conn.execute(
+                """UPDATE topics SET kb_file_path = NULL, kb_file_hash = NULL,
+                   source = 'retired' WHERE id = ?""",
+                (row["id"],),
+            )
+            retired += 1
+    if retired:
+        store.conn.commit()
+    return retired
 
 
 def quick_sync_check(store: Store, kb_path: str) -> bool:

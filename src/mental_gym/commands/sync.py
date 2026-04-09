@@ -3,7 +3,7 @@
 from mental_gym.config import load_config
 from mental_gym.db.schema import open_db
 from mental_gym.db.store import Store
-from mental_gym.engine.kb_sync import apply_sync, detect_changes
+from mental_gym.engine.kb_sync import apply_sync, detect_changes, retire_deleted
 from mental_gym.ui import (
     Color, bold, colored, confirm, dim, print_error, print_header,
     print_info, print_separator, print_success,
@@ -58,12 +58,22 @@ def run_sync(args):
     print()
 
     # Confirm
-    total_changes = len(new_files) + len(modified_files)
+    total_changes = len(new_files) + len(modified_files) + len(deleted_files)
     if total_changes > 0:
         if confirm(f"Apply {total_changes} changes?"):
             added, updated = apply_sync(store, config.knowledge_base,
                                          new_files, modified_files)
-            print_success(f"Sync complete: {added} topics added, {updated} updated.")
+            retired = 0
+            if deleted_files:
+                retired = retire_deleted(store, deleted_files)
+            parts = []
+            if added:
+                parts.append(f"{added} topics added")
+            if updated:
+                parts.append(f"{updated} updated")
+            if retired:
+                parts.append(f"{retired} retired")
+            print_success(f"Sync complete: {', '.join(parts) or 'no changes'}.")
 
             # Update vector index
             try:
@@ -77,7 +87,5 @@ def run_sync(args):
                 print_info(f"Index update skipped: {e}")
         else:
             print_info("Sync cancelled.")
-    else:
-        print_info("No actionable changes (only deletions detected).")
 
     conn.close()

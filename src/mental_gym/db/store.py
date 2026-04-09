@@ -121,10 +121,15 @@ class Store:
             return None
         return self._row_to_topic(row)
 
-    def get_all_topics(self) -> List[Topic]:
-        rows = self.conn.execute(
-            "SELECT * FROM topics ORDER BY name"
-        ).fetchall()
+    def get_all_topics(self, include_retired: bool = False) -> List[Topic]:
+        if include_retired:
+            rows = self.conn.execute(
+                "SELECT * FROM topics ORDER BY name"
+            ).fetchall()
+        else:
+            rows = self.conn.execute(
+                "SELECT * FROM topics WHERE source != 'retired' ORDER BY name"
+            ).fetchall()
         return [self._row_to_topic(r) for r in rows]
 
     def get_topics_due_for_review(self, now: Optional[str] = None) -> List[Topic]:
