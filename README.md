@@ -4,15 +4,19 @@
 
 ## Why
 
-You don't build muscle by watching someone else lift weights. You don't build mental expertise by watching an AI think.
+You don't grow muscle by watching someone else lift. No matter how beautiful their form is, no matter how long you watch — your body doesn't change. The work has to happen inside *you*.
 
-But that's what most AI-assisted "learning" is. You ask the LLM to explain something, it explains beautifully, and you walk away feeling smarter. You haven't gotten smarter. You've confused *access* to knowledge with *possession* of it. Try explaining that concept from scratch — no AI, no notes, blank page — and feel the gap.
+The same is true for your mind. And yet.
 
-This matters more now, not less. LLMs have commoditized surface-level knowledge. Anyone can sound informed about anything in five minutes. What's genuinely scarce — and increasingly valuable — is deep domain expertise: the kind that gives you judgment, research taste, the ability to connect ideas across fields, to see what others can't, to make real decisions under uncertainty. This doesn't come from chatting with an AI. It grows from within, through struggle, retrieval, and correction. There are no shortcuts. The 10,000 hours are still real.
+Hundreds of hours talking to LLMs. Reading their explanations, nodding along, asking follow-ups, feeling the warm glow of "I get it now." Then one day — no AI, no notes, just you and a blank page — you try to explain a core concept in your own field. And almost nothing comes out.
 
-Mental Gym is the tool for people who understand this. It inverts the AI workflow: **you produce, the AI challenges.** You explain concepts from memory. You predict findings before seeing them. You defend claims under pressure. You write from scratch. The AI designs exercises at your level, evaluates your responses with honest feedback, tracks what you actually know versus what you think you know, and never lets you stay comfortable.
+That gap is terrifying. You've spent months *adjacent* to expertise without actually building it. The AI knew things. You were just in the room.
 
-**This is not for casual learners.** It's for researchers, graduate students, and professionals who want to genuinely own a field.
+Here's what makes this urgent: in a world where anyone can sound informed about anything in five minutes, **surface knowledge is worthless.** It's free. Everyone has it. What's genuinely rare — what gives you judgment, research taste, the vision to connect ideas no one else connects, the confidence to make hard calls under uncertainty — is *deep* domain expertise. The kind that lives in your bones. And that still takes what it has always taken: struggle, retrieval, correction, repetition. The 10,000 hours haven't gone away. AI just made it dangerously easy to sleepwalk through them.
+
+Mental Gym exists because the AI should be your trainer, not your substitute. It flips the workflow: **you produce, the AI challenges.** You explain from memory. You predict before you see. You defend under pressure. You write cold. The AI designs the exercises, scores you honestly, remembers what you actually know versus what you think you know, and never lets you get comfortable.
+
+**This is not for everyone.** It's for people who want to genuinely own a field — researchers, builders, graduate students, anyone who's decided that being *adjacent* to expertise isn't enough.
 
 ## How It Works
 
