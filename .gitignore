@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Mental Gym runtime data
+data/
+mental_gym.yaml
+
+# Claude Code local settings
+.claude/
+
+# IDE
+.idea/
+.vscode/

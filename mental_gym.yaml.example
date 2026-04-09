@@ -1,0 +1,26 @@
+# Mental Gym Configuration
+# Created by: mental-gym init
+
+# Your study domain — any field you want to build expertise in
+domain: "machine learning"
+
+# Path to knowledge base directory (markdown files)
+# Optional — omit if you don't have one
+# knowledge_base: ./my-notes
+
+# LLM backend configuration
+llm:
+  # Backend options:
+  #   claude-cli    — Uses Claude Code CLI (OAuth, no API key needed)
+  #   anthropic-api — Direct Anthropic API (requires ANTHROPIC_API_KEY env var)
+  #   codex-cli     — Uses Codex CLI
+  backend: claude-cli
+
+  # Model hint (used by anthropic-api backend; CLI backends use their default)
+  model: claude-sonnet-4-6
+
+# Target session duration in minutes
+session_duration: 25
+
+# Database path (relative to this config file)
+db_path: data/mental_gym.db
